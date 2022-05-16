@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
 </head>
 <body>
     <h1>ini halaman html index</h1>
+
+    {% if not search %}
+        <h2>ini halaman index biasa</h2>
+    {% else %}
+        <h2>ini halaman search</h2>
+    {% endif %}
+
+    <a href="{{ url_for('show_setting') }}">Setting</a>
+    <br>
+    <a href="{{  url_for('show_profile', username='admin') }}">admin</a>
 </body>
 </html>
