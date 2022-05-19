@@ -9,3 +9,6 @@ gunakan pip install
 - keras
 - pillow
 - numpy
+
+clone spesifik branch
+git clone -b <branchname> <remote-repo-url>
